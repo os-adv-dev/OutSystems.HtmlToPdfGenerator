@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Company Report</title>
+    <style>
+        body {
+            background: rgb(204,204,204);
+        }
+
+        page {
+            background: white;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 0.5cm;
+            box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+        }
+
+            page[size="A4"] {
+                width: 21cm;
+                height: 29.7cm;
+            }
+
+                page[size="A4"][layout="landscape"] {
+                    width: 29.7cm;
+                    height: 21cm;
+                }
+
+            page[size="A3"] {
+                width: 29.7cm;
+                height: 42cm;
+            }
+
+                page[size="A3"][layout="landscape"] {
+                    width: 42cm;
+                    height: 29.7cm;
+                }
+
+            page[size="A5"] {
+                width: 14.8cm;
+                height: 21cm;
+            }
+
+                page[size="A5"][layout="landscape"] {
+                    width: 21cm;
+                    height: 14.8cm;
+                }
+
+        @media print {
+            body, page {
+                margin: 10px;
+                box-shadow: 0;
+            }
+        }
+    </style>
+</head>
+<page size="A4">
+    <body>
+        <header>
+            <h1>Company Name</h1>
+            <img src="https://via.placeholder.com/80x80" alt="Company Logo">
+        </header>
+        <section>
+            <h2>Customer Details</h2>
+            <ul>
+                <li>Name: John Doe</li>
+                <li>Email: john.doe@example.com</li>
+                <li>Phone: 555-1234</li>
+                <li>Address: 123 Main St, Anytown, USA</li>
+            </ul>
+            <h2>Product Sales</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity Sold</th>
+                        <th>Unit Price</th>
+                        <th>Total Sales</th>
+                        <th>Profit Margin</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Product A</td>
+                        <td>100</td>
+                        <td>$10.00</td>
+                        <td>$1,000.00</td>
+                        <td>20%</td>
+                    </tr>
+                    <tr>
+                        <td>Product B</td>
+                        <td>75</td>
+                        <td>$15.00</td>
+                        <td>$1,125.00</td>
+                        <td>25%</td>
+                    </tr>
+                    <tr>
+                        <td>Product C</td>
+                        <td>50</td>
+                        <td>$20.00</td>
+                        <td>$1,000.00</td>
+                        <td>30%</td>
+                    </tr>
+                    <tr>
+                        <td>Product D</td>
+                        <td>25</td>
+                        <td>$25.00</td>
+                        <td>$625.00</td>
+                        <td>35%</td>
+                    </tr>
+                    <tr>
+                        <td>Product E</td>
+                        <td>60</td>
+                        <td>$90.00</td>
+                        <td>$356.00</td>
+                        <td>30%</td>
+                </tbody>
+            </table>
+        </section>
+        <footer>
+            <p>&copy; 2023 Company Name. All rights reserved.</p>
+        </footer>
+    </body>
+</page>
+</html>
