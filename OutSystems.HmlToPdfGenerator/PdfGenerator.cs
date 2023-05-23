@@ -27,9 +27,18 @@ public class PdfGenerator
 {
     public async Task<byte[]> GeneratePdf(string urlOrHtml, HtmlSource source, PaperOrientation orientation, PaperSize size)
     {
-        var browserLauncher = new HeadlessChromiumPuppeteerLauncher(new LoggerFactory());
+        // Replace if you don't want to use HeadlessChromiumPuppeteerLauncher
+        //using var browserLauncherFetcher = new BrowserFetcher();
+        //await browserLauncherFetcher.DownloadAsync(BrowserFetcher.DefaultChromiumRevision);
+        //var browser = await Puppeteer.LaunchAsync(new LaunchOptions
+        //{
+        //    Headless = true,
+        //    ExecutablePath = ""
+        //});
 
-        using var browser = await browserLauncher.LaunchAsync();
+
+        var browserLauncherFetcher = new HeadlessChromiumPuppeteerLauncher(new LoggerFactory());
+        var browser = await browserLauncherFetcher.LaunchAsync();
         using var page = await browser.NewPageAsync();
 
         switch (source)
